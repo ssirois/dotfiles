@@ -136,6 +136,7 @@ answer_is_skip() {
 #------------------------------------------------------------------------------#
 
 is_macos() {
+  return 0
   local kernel_name=""
   kernel_name="$(uname -s)"
   [[ "$kernel_name" == "Darwin" ]] || return 1
@@ -198,19 +199,13 @@ is_supported_version() {
 }
 
 verify_os() {
-  declare -r MINIMUM_MACOS_VERSION="10.10"
+  declare -r ORIGINAL_REPOSITORY="https://github.com/petemcw/dotfiles"
   declare -r MINIMUM_UBUNTU_VERSION="14.04"
   local os_version=""
 
-  # Check if the OS is `macOS` and it's above the required version.
+  # Check if the OS is `macOS` and send them back to the original repository
   if is_macos; then
-    os_version="$(sw_vers -productVersion)"
-
-    if is_supported_version "$os_version" "$MINIMUM_MACOS_VERSION"; then
-      return 0
-    else
-      print_fail "Unsupported version, intended only for macOS %s+" "$MINIMUM_MACOS_VERSION"
-    fi
+    print_fail "For macOS, please go to %s+" "$ORIGINAL_REPOSITORY"
   # Check if the OS is `Ubuntu` and it's above the required version.
   elif is_ubuntu; then
     os_version="$(lsb_release -d | cut -f2 | cut -d' ' -f2)"

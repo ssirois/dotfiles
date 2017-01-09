@@ -1,6 +1,6 @@
 # Dotfiles
 
-Dotfiles are used to configure and personalize your computer environment. This is the collection of files I use when spinning up a new machine (MacOS or Ubuntu).
+Dotfiles are used to configure and personalize your computer environment. This is the collection of files I use when spinning up a new machine (Ubuntu).
 
 **Before you use these**, browse the contents of the repository and see how all the components work together and mesh with your needs. Then go ahead and [fork it](https://github.com/ssirois/dotfiles/fork), [remove](https://github.com/ssirois/dotfiles/blob/master/README.md#forks) what you don't need, and build on the rest to create your own flavor.
 
@@ -129,21 +129,17 @@ Here's what happens during install:
   * Any file or directory name ending in `.copy` will get linked into the home directory
 * Symlinks for [Git](https://github.com/ssirois/dotfiles/tree/master/src/git), [Shell](https://github.com/ssirois/dotfiles/tree/master/src/shell), and [Vim](https://github.com/ssirois/dotfiles/tree/master/src/vim) configurations will created in `~/`
   * Any file or directory name ending in `.symlink` will get linked into the home directory
-* Applications and command-line tools are installed for [MacOS](https://github.com/ssirois/dotfiles/tree/master/src/os/install/macos) & [Ubuntu](https://github.com/ssirois/dotfiles/tree/master/src/os/install/ubuntu)
+* Applications and command-line tools are installed for [Ubuntu](https://github.com/ssirois/dotfiles/tree/master/src/os/install/ubuntu)
   * Python-powered [Powerline](https://github.com/ssirois/dotfiles/blob/master/src/os/install/powerline.sh) will be installed
   * [Vim plugins](https://github.com/ssirois/dotfiles/blob/master/src/os/install/vim.sh) are installed
-* Sane preferences are set for [MacOS](https://github.com/ssirois/dotfiles/tree/master/src/os/preferences/macos) & [Ubuntu](https://github.com/ssirois/dotfiles/tree/master/src/os/preferences/ubuntu)
+* Sane preferences are set for [Ubuntu](https://github.com/ssirois/dotfiles/tree/master/src/os/preferences/ubuntu)
 * Finally, `zsh` will be set as the [default shell](https://github.com/ssirois/dotfiles/blob/master/src/os/configure_zsh.sh)
 
 # Testing
 
-## MacOS
+## GNU/Linux
 
-Unfortunately you won't be able to test your `~/.dotfiles` natively on MacOS using Docker. Instead you'll need to build a VirtualBox machine or try it out in a separate user account on your existing system.
-
-## Linux
-
-A great way to test changes to your `~/.dotfiles` on Linux is by using Docker.
+A great way to test changes to your `~/.dotfiles` on GNU/Linux is by using Docker.
 
 ### Build & Run a Test Container
 
