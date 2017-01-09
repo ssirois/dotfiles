@@ -10,12 +10,6 @@ To install, run the appropriate command for your system.
 
 :warning: **DO NOT** run the `setup.sh` command if you don't fully understand how it works. It can cause trouble on an already configured system.
 
-## MacOS
-
-```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ssirois/dotfiles/master/src/os/setup.sh)"
-```
-
 ## Ubuntu
 
 ```bash
@@ -171,7 +165,6 @@ If you fork this project for your own use, awesome! Just don't forget to update/
 
 * Links in this [README.md](https://github.com/ssirois/dotfiles/blob/master/README.md#installation)
 * Environment variables in the [`setup.sh` script](https://github.com/ssirois/dotfiles/blob/master/src/os/setup.sh#L5)
-* [Login Window](https://github.com/ssirois/dotfiles/blob/master/src/os/preferences/macos/ui_ux.sh#L18) text preference
 
 # Thanks
 
