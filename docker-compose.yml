@@ -3,6 +3,6 @@ services:
   dotfiles:
     build:
       context: .
-    image: petemcw/dotfiles
+    image: ssirois/dotfiles
     volumes:
       - ./src/:/root/.dotfiles/

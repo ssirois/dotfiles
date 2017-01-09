@@ -5,7 +5,7 @@ set -e
 export DOTFILES_DATETIME
 DOTFILES_DATETIME=$(date -u +"%Y%m%d%H%M.%S")
 export DOTFILES_DEPS=${DOTFILES_DEPS:-curl gcc git grep perl sed sudo tee}
-export DOTFILES_REPOSITORY=${DOTFILES_REPOSITORY:-petemcw/dotfiles}
+export DOTFILES_REPOSITORY=${DOTFILES_REPOSITORY:-ssirois/dotfiles}
 export DOTFILES_BRANCH=${DOTFILES_BRANCH:-master}
 export DOTFILES_ORIGIN=${DOTFILES_ORIGIN:-https://github.com/$DOTFILES_REPOSITORY.git}
 export DOTFILES_HELPERS=${DOTFILES_HELPERS:-https://raw.githubusercontent.com/$DOTFILES_REPOSITORY/$DOTFILES_BRANCH/src/os/helpers.sh}

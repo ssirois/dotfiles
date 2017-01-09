@@ -2,7 +2,7 @@
 
 Dotfiles are used to configure and personalize your computer environment. This is the collection of files I use when spinning up a new machine (MacOS or Ubuntu).
 
-**Before you use these**, browse the contents of the repository and see how all the components work together and mesh with your needs. Then go ahead and [fork it](https://github.com/petemcw/dotfiles/fork), [remove](https://github.com/petemcw/dotfiles/blob/master/README.md#forks) what you don't need, and build on the rest to create your own flavor.
+**Before you use these**, browse the contents of the repository and see how all the components work together and mesh with your needs. Then go ahead and [fork it](https://github.com/ssirois/dotfiles/fork), [remove](https://github.com/ssirois/dotfiles/blob/master/README.md#forks) what you don't need, and build on the rest to create your own flavor.
 
 # Installation
 
@@ -13,20 +13,20 @@ To install, run the appropriate command for your system.
 ## MacOS
 
 ```bash
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/petemcw/dotfiles/master/src/os/setup.sh)"
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ssirois/dotfiles/master/src/os/setup.sh)"
 ```
 
 ## Ubuntu
 
 ```bash
-bash -c "$(wget -qO - https://raw.githubusercontent.com/petemcw/dotfiles/master/src/os/setup.sh)"
+bash -c "$(wget -qO - https://raw.githubusercontent.com/ssirois/dotfiles/master/src/os/setup.sh)"
 ```
 
 :sparkles: All done! :sparkles:
 
 # Updates
 
-To update the repository with any new changes and re-run the setup process, simply run the [`setup.sh` script](https://github.com/petemcw/dotfiles/blob/master/src/os/setup.sh). You can also update a particular component by running the appropriate script.
+To update the repository with any new changes and re-run the setup process, simply run the [`setup.sh` script](https://github.com/ssirois/dotfiles/blob/master/src/os/setup.sh). You can also update a particular component by running the appropriate script.
 
 # Customize
 
@@ -50,7 +50,7 @@ The `~/.gitconfig.local` file will be created for you during installation. It's 
 
 ## Shell Settings
 
-The `~/.localrc` file will be created for you during installation. It's contents are up to you and will be sourced after all other [Zsh related files](https://github.com/petemcw/dotfiles/tree/master/src/shell/zsh) allowing you to overwrite and add to the default config.
+The `~/.localrc` file will be created for you during installation. It's contents are up to you and will be sourced after all other [Zsh related files](https://github.com/ssirois/dotfiles/tree/master/src/shell/zsh) allowing you to overwrite and add to the default config.
 
 **Example:** Use `~/.localrc` to store sensitive information such as credentials:
 
@@ -122,18 +122,18 @@ The `setup.sh` script is a simple installer that will prompt for some info, chec
 
 Here's what happens during install:
 
-* The [repository is cloned](https://github.com/petemcw/dotfiles/blob/master/src/os/setup.sh#L50) into your home folder at `~/.dotfiles`
+* The [repository is cloned](https://github.com/ssirois/dotfiles/blob/master/src/os/setup.sh#L50) into your home folder at `~/.dotfiles`
   * If this isn't the first run, you'll be asked if you want to update the repository with an new commits
-* Some [additional directories](https://github.com/petemcw/dotfiles/blob/master/src/os/create_directories.sh) will be created
-* Files with [user-provided content](https://github.com/petemcw/dotfiles/blob/master/src/os/copy_files.sh) will be copied
+* Some [additional directories](https://github.com/ssirois/dotfiles/blob/master/src/os/create_directories.sh) will be created
+* Files with [user-provided content](https://github.com/ssirois/dotfiles/blob/master/src/os/copy_files.sh) will be copied
   * Any file or directory name ending in `.copy` will get linked into the home directory
-* Symlinks for [Git](https://github.com/petemcw/dotfiles/tree/master/src/git), [Shell](https://github.com/petemcw/dotfiles/tree/master/src/shell), and [Vim](https://github.com/petemcw/dotfiles/tree/master/src/vim) configurations will created in `~/`
+* Symlinks for [Git](https://github.com/ssirois/dotfiles/tree/master/src/git), [Shell](https://github.com/ssirois/dotfiles/tree/master/src/shell), and [Vim](https://github.com/ssirois/dotfiles/tree/master/src/vim) configurations will created in `~/`
   * Any file or directory name ending in `.symlink` will get linked into the home directory
-* Applications and command-line tools are installed for [MacOS](https://github.com/petemcw/dotfiles/tree/master/src/os/install/macos) & [Ubuntu](https://github.com/petemcw/dotfiles/tree/master/src/os/install/ubuntu)
-  * Python-powered [Powerline](https://github.com/petemcw/dotfiles/blob/master/src/os/install/powerline.sh) will be installed
-  * [Vim plugins](https://github.com/petemcw/dotfiles/blob/master/src/os/install/vim.sh) are installed
-* Sane preferences are set for [MacOS](https://github.com/petemcw/dotfiles/tree/master/src/os/preferences/macos) & [Ubuntu](https://github.com/petemcw/dotfiles/tree/master/src/os/preferences/ubuntu)
-* Finally, `zsh` will be set as the [default shell](https://github.com/petemcw/dotfiles/blob/master/src/os/configure_zsh.sh)
+* Applications and command-line tools are installed for [MacOS](https://github.com/ssirois/dotfiles/tree/master/src/os/install/macos) & [Ubuntu](https://github.com/ssirois/dotfiles/tree/master/src/os/install/ubuntu)
+  * Python-powered [Powerline](https://github.com/ssirois/dotfiles/blob/master/src/os/install/powerline.sh) will be installed
+  * [Vim plugins](https://github.com/ssirois/dotfiles/blob/master/src/os/install/vim.sh) are installed
+* Sane preferences are set for [MacOS](https://github.com/ssirois/dotfiles/tree/master/src/os/preferences/macos) & [Ubuntu](https://github.com/ssirois/dotfiles/tree/master/src/os/preferences/ubuntu)
+* Finally, `zsh` will be set as the [default shell](https://github.com/ssirois/dotfiles/blob/master/src/os/configure_zsh.sh)
 
 # Testing
 
@@ -160,22 +160,22 @@ docker compose build
 To test the online installation, create a self-removing container like so:
 
 ```bash
-docker run -it --rm petemcw/dotfiles
+docker run -it --rm ssirois/dotfiles
 ```
 
 To test a local `dotfiles` repository, mount as a volume in your self-removing container:
 
 ```bash
-docker run -it --rm -v $PWD:/root/.dotfiles petemcw/dotfiles
+docker run -it --rm -v $PWD:/root/.dotfiles ssirois/dotfiles
 ```
 
 # Forks
 
 If you fork this project for your own use, awesome! Just don't forget to update/customize the following:
 
-* Links in this [README.md](https://github.com/petemcw/dotfiles/blob/master/README.md#installation)
-* Environment variables in the [`setup.sh` script](https://github.com/petemcw/dotfiles/blob/master/src/os/setup.sh#L5)
-* [Login Window](https://github.com/petemcw/dotfiles/blob/master/src/os/preferences/macos/ui_ux.sh#L18) text preference
+* Links in this [README.md](https://github.com/ssirois/dotfiles/blob/master/README.md#installation)
+* Environment variables in the [`setup.sh` script](https://github.com/ssirois/dotfiles/blob/master/src/os/setup.sh#L5)
+* [Login Window](https://github.com/ssirois/dotfiles/blob/master/src/os/preferences/macos/ui_ux.sh#L18) text preference
 
 # Thanks
 
@@ -191,4 +191,4 @@ So much inspiration and code has been gleaned from many talented people over the
 
 # License
 
-The code uses the [MIT license](https://github.com/petemcw/dotfiles/blob/master/LICENSE).
+The code uses the [MIT license](https://github.com/ssirois/dotfiles/blob/master/LICENSE).

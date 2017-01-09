@@ -333,7 +333,7 @@ let g:vim_markdown_frontmatter=1
 
   "" PHPDoc settings
   if !exists("g:pdv_cfg_Author")
-    let g:pdv_cfg_Author = "Peter McWilliams <petemcw@gmail.com>"
+    let g:pdv_cfg_Author = "Samuel Sirois <samuel@sirois.info>"
   endif
 
   "" Markdown Settings
