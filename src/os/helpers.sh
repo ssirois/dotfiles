@@ -136,7 +136,6 @@ answer_is_skip() {
 #------------------------------------------------------------------------------#
 
 is_macos() {
-  return 0
   local kernel_name=""
   kernel_name="$(uname -s)"
   [[ "$kernel_name" == "Darwin" ]] || return 1
