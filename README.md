@@ -179,15 +179,15 @@ If you fork this project for your own use, awesome! Just don't forget to update/
 
 # Thanks
 
-So much inspiration and code has been gleaned from many talented people over the years, including but not limited to:
+Thanks to [Pete McWilliams](https://github.com/petemcw) for providing such a great code base to fork from. See his own [inspiration sources](https://github.com/petemcw/dotfiles#thanks) in the original repository.
 
-* [Cătălin Mariș](https://github.com/alrra)
-* [Ben Hilburn](https://github.com/bhilburn)
-* [Ryan Bates](https://github.com/ryanb)
-* [Andrei Zmievski](https://github.com/andreiz)
-* [Zach Holman](https://github.com/holman)
-* [Nick Nisi](https://github.com/nicknisi)
-* [Martin Grenfell](https://github.com/scrooloose)
+For this fork, inspiration has been gleaned from (but not limited to):
+
+* [Zach Holman](https://github.com/holman) and his great article:
+  * [dotfiles are meant to be forked](https://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/) where he presents his topic-centric vision for organizing his dotfiles
+* [dotfiles.github.io](https://dotfiles.github.io/) where I was able to find all kind of bootstraps for a dotfile project
+
+And of course, many thanks to the free software community without whom I couldn't have the freedoms to run/study/redistribute and distribute copies of my fork and include great ideas from others to become more efficient in my everyday work/passion.
 
 # License
 
