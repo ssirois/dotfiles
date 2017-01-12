@@ -8,7 +8,7 @@ cd "$DOTFILES_PATH" \
 
 link_files() {
   # look for all files/directories ending in ".symlink".
-  for SOURCE in $(find "$DOTFILES_PATH/src" -path ~/.vim -prune -o -name \*.symlink)
+  for SOURCE in $(find "$DOTFILES_PATH/src" -name \*.symlink | grep -v "^$DOTFILES_PATH\/src\/.*\/.config\/.*")
   do
     ITEM=".$(basename ${SOURCE%.*})"
     DEST="$HOME/$ITEM"
