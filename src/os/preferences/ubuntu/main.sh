@@ -27,7 +27,9 @@ link_configs() {
     fi
 
     # make sure path to $DEST exists before linking
-    mkdir -p "$(dirname $DEST)"
+    if [[ ! -e $(dirname $DEST) ]]; then
+      mkdir -p "$(dirname $DEST)"
+    fi
 
     execute \
       "ln -s $SOURCE $DEST" \
